@@ -1,5 +1,6 @@
 #!/usr/bin/python3.xx
 #code name : Khairul
+#from: https://github.com/jaxBCD
 try:
     import requests, os, re
 except ImportError as err:
