@@ -1,7 +1,7 @@
 #!/usr/bin/python3.xx
 #code name : Khairul
 try:
-    import requests, os, re, optparse
+    import requests, os, re
 except ImportError as err:
     print(err)
     
@@ -38,15 +38,13 @@ class Transalate(Banner):
             req = requests.get(f"https://translate.google.com/m?hl=id&sl={self.frm}&tl={self.to}&ie=UTF-8&prev=_m&q={self.text}", timeout=5.3).text
             # regular expresion
             result = re.findall(r'class="t0">(.*?)</div>', str(req))
-            print(f"Result: {Colors.c}{result[0]}{Colors.co}")
+            print(f"[*]Result: {Colors.c}{result[0]}{Colors.co}")
         except ConnectionError as err:
             print(err)
         except requests.Timeout as err:
             print(err)
         except Exception as err:
             print(err)
-
-
 
 
 
